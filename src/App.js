@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+import Card from './components/Card';
 
 function App() {
   return (
@@ -11,11 +12,11 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route exact path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/card/:user' element={<Card/>} />
         </Routes>
-        
       </div>
     </BrowserRouter>
     
